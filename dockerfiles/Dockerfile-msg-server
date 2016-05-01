@@ -1,0 +1,9 @@
+FROM rabbitmq:3-management
+MAINTAINER mesaque.silva@madlabbrazil.com
+ENV RABBITMQ_ERLANG_COOKIE h4524M8NMP1pZcX
+ENV RABBITMQ_DEFAULT_USER madlab
+ENV RABBITMQ_DEFAULT_PASS 290T0CmNFSgLNXF
+EXPOSE 15671 15672
+
+COPY dockerfiles/start-msg-server.sh /start-msg-server.sh
+CMD ["/start-msg-server.sh"]

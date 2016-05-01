@@ -1,0 +1,2 @@
+FROM PHP:5.6.21-cli
+MAINTAINER mesaque.silva@madlabbrazil.com
