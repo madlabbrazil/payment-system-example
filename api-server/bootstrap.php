@@ -2,6 +2,8 @@
 // bootstrap.php
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
+use PhpAmqpLib\Connection\AMQPStreamConnection;
+use PhpAmqpLib\Message\AMQPMessage;
 
 require_once "vendor/autoload.php";
 
@@ -20,3 +22,14 @@ $conn = array(
 
 // obtaining the entity manager
 $entityManager = EntityManager::create( $conn, $config );
+
+
+##RabbitMQ
+$connection = new AMQPStreamConnection(
+	$_SERVER["MLB_MESSAGING_PORT_5672_TCP_ADDR"],
+	5672,
+	$_SERVER["MLB_MESSAGING_ENV_RABBITMQ_DEFAULT_USER"],
+	$_SERVER["MLB_MESSAGING_ENV_RABBITMQ_DEFAULT_PASS"]
+	);
+$channel = $connection->channel();
+$channel->queue_declare('rpc_queue', false, false, false, false);

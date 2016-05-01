@@ -1,2 +1,4 @@
-FROM PHP:5.6.21-cli
+FROM php:5.6.21-cli
 MAINTAINER mesaque.silva@madlabbrazil.com
+COPY api-server /api-server
+CMD ["/api-server/index.php"]
