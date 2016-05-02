@@ -3,6 +3,8 @@
 require_once "bootstrap.php";
 
 $callback = function($req) {
+	global $entityManager;
+
 	$msg = json_decode( $req->body );
 
 	$sale_list = array();
