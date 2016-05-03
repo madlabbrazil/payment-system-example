@@ -10,7 +10,7 @@ class Sales
     protected $product_name;
     /** @Column(type="integer") **/
     protected $quantity;
-    /** @Column(type="datetime") **/
+    /** @Column(type="string") **/
     protected $dta_sale;
 
 

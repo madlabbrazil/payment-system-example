@@ -1,5 +1,6 @@
 FROM php:5.6.21-cli
 MAINTAINER mesaque.silva@madlabbrazil.com
 COPY api-server /api-server
+COPY dockerfiles/start-api-server.sh /start-api-server.sh
 RUN docker-php-ext-install -j$(nproc) bcmath
-CMD ["/api-server/index.php"]
+CMD ["/start-api-server.sh"]
