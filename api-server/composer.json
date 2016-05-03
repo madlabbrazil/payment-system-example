@@ -2,5 +2,8 @@
     "require": {
 	"doctrine/orm": "2.4.*",
         "php-amqplib/php-amqplib": "2.5.*"
+    },
+    "autoload": {
+        "psr-0": {"": "src/"}
     }
 }

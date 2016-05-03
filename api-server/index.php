@@ -1,5 +1,8 @@
 #!/usr/bin/env php
 <?php
+use PhpAmqpLib\Connection\AMQPStreamConnection;
+use PhpAmqpLib\Message\AMQPMessage;
+
 require_once "bootstrap.php";
 
 $callback = function($req) {
