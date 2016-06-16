@@ -23,7 +23,7 @@ class PaymentSystemRpcClient {
 
 	public function __construct() {
 		$this->connection = new AMQPStreamConnection(
-			'172.17.0.2', 5672, 'madlab', '290T0CmNFSgLNXF');
+			'paysys.madlabbrazil.com', 5672, 'madlab', '290T0CmNFSgLNXF');
 		$this->channel = $this->connection->channel();
 		list($this->callback_queue, ,) = $this->channel->queue_declare(
 			"", false, false, true, false);
@@ -79,7 +79,7 @@ function render_menu(){
 	<h2>Total: <?php echo $total; ?> products sold</h2>
 	<h2>Active search: "fetch_all"</h2>
 	<h3>Connection Status: <span style="color:green">Alive<span></h3>
-	<h3>Host: 172.17.0.2</h3>
+	<h3>Host: paysys.madlabbrazil.com</h3>
 	<h3>User: madlab</h3>
 	<h3>Password: 290T0CmNFSgLNXF</h3>
 	<hr>
