@@ -13,7 +13,7 @@ Description:
 
 ```
 docker build -f dockerfiles/Dockerfile-msg-server -t mlb-payment-system-message-server .
-docker run -d --hostname payment-system-msg --name mlb-messaging  mlb-payment-system-message-server
+docker run -d --hostname payment-system-msg --name mlb-messaging -p 5672:5672 -p 15672:15672 -p 15671:15671  mlb-payment-system-message-server
 ```
 To see if you container are build correctly run this command `docker ps`
 
