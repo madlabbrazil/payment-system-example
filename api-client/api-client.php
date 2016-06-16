@@ -84,6 +84,22 @@ function render_menu(){
 	<h3>Password: 290T0CmNFSgLNXF</h3>
 	<hr>
 	Results:
+	<style>
+                pre {
+		  display:block;
+		  font:normal 12px/22px Monaco,Monospace !important;
+		  color:#CFDBEC;
+		  background-color:#2f2f2f;
+		  background-image:-webkit-repeating-linear-gradient(top, #444 0px, #444 22px, #2f2f2f 22px, #2f2f2f 44px);
+		  background-image:-moz-repeating-linear-gradient(top, #444 0px, #444 22px, #2f2f2f 22px, #2f2f2f 44px);
+		  background-image:-ms-repeating-linear-gradient(top, #444 0px, #444 22px, #2f2f2f 22px, #2f2f2f 44px);
+		  background-image:-o-repeating-linear-gradient(top, #444 0px, #444 22px, #2f2f2f 22px, #2f2f2f 44px);
+		  background-image:repeating-linear-gradient(top, #444 0px, #444 22px, #2f2f2f 22px, #2f2f2f 44px);
+		  padding:0em 1em;
+		  overflow:auto;
+		}
+        </style>
+        
 	<pre>
 	<?php
 	var_dump( array_reverse( $response, true ) );
