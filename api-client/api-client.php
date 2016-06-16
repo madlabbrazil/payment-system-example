@@ -79,11 +79,12 @@ function render_menu(){
 	<h2>Total: <?php echo $total; ?> products sold</h2>
 	<h2>Active search: "fetch_all"</h2>
 	<h3>Connection Status: <span style="color:green">Alive<span></h3>
-	<h3>Host: paysys.madlabbrazil.com</h3>
+	<h3>Host: paysys.madlabbrazil.com:15672</h3>
 	<h3>User: madlab</h3>
 	<h3>Password: 290T0CmNFSgLNXF</h3>
 	<hr>
 	Results:
+	<pre>
 	<?php
 	var_dump( array_reverse( $response, true ) );
 }
